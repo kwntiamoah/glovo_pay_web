@@ -7,10 +7,10 @@
         <zxing-scanner [formats]="allowedFormats" (scanSuccess)="scanSuccess($event)" (scanComplete)="scanComplete($event)"></zxing-scanner>
     </div>
 
-    <ng-container *ngIf="details !== '' ">
+    <!-- <ng-container *ngIf="details !== '' ">
         <div class="flex flex-col">
             Driver details here
         </div>
         <button class="btn-primary">Pay</button>
-    </ng-container>
+    </ng-container> -->
 </div>
