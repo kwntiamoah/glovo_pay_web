@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { ScannerComponent } from './features/scanner/scanner.component';
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,12 @@ import { ScannerComponent } from './features/scanner/scanner.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    AngularToastifyModule,
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    ToastService
   ],
   bootstrap: [AppComponent]
 })

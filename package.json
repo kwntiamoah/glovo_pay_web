@@ -21,6 +21,7 @@
     "@zxing/browser": "^0.1.1",
     "@zxing/library": "^0.19.1",
     "@zxing/ngx-scanner": "^3.6.2",
+    "angular-toastify": "^1.0.4",
     "ng-heroicon": "^2.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

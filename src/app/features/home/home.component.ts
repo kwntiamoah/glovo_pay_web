@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { ToastService } from 'angular-toastify';
 import { ScannerService } from 'src/app/services/scanner.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   isLoading: boolean = false
   paymentForm: FormGroup = new FormGroup({})
 
-  constructor(private route: ActivatedRoute, private fb: FormBuilder, private scanner: ScannerService) {
+  constructor(private route: ActivatedRoute, private fb: FormBuilder, private scanner: ScannerService, private toast: ToastService) {
     this.networks = [
       { value: 'MTN', image: '/assets/images/mtn.jpeg', bgColor: 'bg-[#feca05]' },
       { value: 'VOD', image: '/assets/images/vod.jpg', bgColor: 'bg-[#e61e28]' },
@@ -59,6 +60,12 @@ export class HomeComponent implements OnInit {
       .subscribe({
         next: res => {
           console.log(res)
+          if (res.response_code === 200) {
+            this.toast.success('Payment received for processing')
+          } else {
+            this.toast.info(res.message)
+          }
+
           this.paymentForm.reset()
           this.isLoading = false
         },
