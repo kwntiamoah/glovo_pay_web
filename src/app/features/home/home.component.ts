@@ -60,6 +60,7 @@ export class HomeComponent implements OnInit {
         next: res => {
           console.log(res)
           this.paymentForm.reset()
+          this.isLoading = false
         },
         error: error => {
           console.log(error)
