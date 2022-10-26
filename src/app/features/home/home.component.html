@@ -1,29 +1,12 @@
 <div class="h-screen w-screen">
     <div class="container p-6 space-y-6">
-        <div class="flex">
-            <img src="/assets/images/logo.svg" class="h-8" alt="">
+        <div class="flex w-full justify-center">
+            <img src="/assets/images/trans_logo.png" class="h-16" alt="">
         </div>
     
-        <div data-test-id="address-animation" class="animation flex w-full items-center justify-center" data-v-0f7dd624=""
-            data-v-56b7e911="">
-            <img src="https://res.cloudinary.com/glovoapp/image/fetch/w_281,h_252,c_lpad,b_transparent,f_auto,q_auto:low,dpr_1.0/https://glovoapp.com/images/landing/video-burger.png"
-                srcset="https://res.cloudinary.com/glovoapp/image/fetch/w_281,h_252,c_lpad,b_transparent,f_auto,q_auto:low,dpr_3.0/https://glovoapp.com/images/landing/video-burger.png 843w, https://res.cloudinary.com/glovoapp/image/fetch/w_281,h_252,c_lpad,b_transparent,f_auto,q_auto:low,dpr_2.0/https://glovoapp.com/images/landing/video-burger.png 562w, https://res.cloudinary.com/glovoapp/image/fetch/w_281,h_252,c_lpad,b_transparent,f_auto,q_auto:low,dpr_1.0/https://glovoapp.com/images/landing/video-burger.png 281w"
-                width="281" height="252" data-test-id="animation-images" class="animation__element" style="display: none;"
-                data-v-0f7dd624="">
-            <video data-test-id="animation-video" autoplay="autoplay" loop="loop" muted="muted" width="281" height="252"
-                class="animation__element" data-v-0f7dd624="">
-                <source
-                    src="https://res.cloudinary.com/glovoapp/video/upload/website_assets/images/landing/address-container-animation.webm"
-                    preload="auto" type="video/webm" data-v-0f7dd624="">
-            </video>
-        </div>
+        <div class="flex flex-col space-y-4 pt-16">
     
-        <div class="flex flex-col space-y-4">
-    
-            <div class="relative">
-                <p class="text-2xl font-bold px-2">How do you want to pay?</p>
-                <div class="rounded-full h-2 w-3/4 -z-10 absolute bg-white top-5"></div>
-            </div>
+            <p class="text-2xl font-bold text-white px-2">How do you want to pay?</p>
     
             <!-- networks -->
             <div class="flex space-x-5 justify-center w-full">
@@ -42,7 +25,7 @@
     
             <!-- phone number -->
             <div class="flex flex-col space-y-2">
-                <label for="number">Phone</label>
+                <label class="text-white" for="number">Phone</label>
                 <div class="relative flex items-center">
                     <div class="absolute bg-secondary p-3 rounded-l-md">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -58,7 +41,7 @@
     
             <!-- amount -->
             <div class="flex flex-col space-y-2">
-                <label for="number">Amount</label>
+                <label class="text-white" for="number">Amount</label>
                 <div class="relative flex items-center">
                     <div class="absolute bg-secondary p-3 rounded-l-md">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
